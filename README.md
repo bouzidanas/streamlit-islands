@@ -2,15 +2,11 @@ streamlit-islands  [![Version](https://img.shields.io/pypi/v/streamlit-islands)]
 [![PyPi - Downloads](https://img.shields.io/pypi/dm/streamlit-islands)](https://pypi.org/project/streamlit-islands/#files)[![Component Demo](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://islands-demo.streamlit.app/)
 ============
 
-Fix the vertical position of Streamlit containers relative to viewport instead of page
-
 ## Installation
 Install [streamlit-islands](https://pypi.org/project/streamlit-islands/) with pip:
 ```bash
 pip install streamlit-islands
 ```
-
-## Usage
 
 ## License
 This project is licensed under the [MIT License](LICENSE.txt)
