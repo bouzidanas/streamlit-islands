@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+setup.py
+streamlit_islands/__init__.py
+streamlit_islands/demo.py
+streamlit_islands/test.py
+streamlit_islands.egg-info/PKG-INFO
+streamlit_islands.egg-info/SOURCES.txt
+streamlit_islands.egg-info/dependency_links.txt
+streamlit_islands.egg-info/requires.txt
+streamlit_islands.egg-info/top_level.txt
