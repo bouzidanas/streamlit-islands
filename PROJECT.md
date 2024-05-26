@@ -76,7 +76,7 @@ import streamlit_islands as sti
 import os.path
 
 def say_hello(name):
-    st.write(name*10)
+    st.write("Hello, " + name)
 
 def add(a, b):
     if st.button('Show the result'):
@@ -98,7 +98,7 @@ import streamlit_islands as sti
 import os.path
 
 def say_hello(name):
-    st.write(name*10)
+    st.write("Hello, " + name)
 
 def add(a, b):
     if st.button('Show the result'):
