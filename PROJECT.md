@@ -16,6 +16,9 @@ While the concept of 'islands' architecture is not the same as what this package
 
 It might be useful to think of the dynamic parts of the app as 'islands' in a sea of static content. These islands are where the user interacts with the app and where the logic of the app is executed. Islands in the same app share the same global scope and thus can share data (variables, functions. etc) and state (`session_state`, etc).
 
+>[!NOTE]
+>*You can achieve something closer to 'component islands' if you decorate the functions (that add dynamic parts of the script) with the `@st.experimental_fragment` decorator. This turns those dynamic parts of the script into fragments which can rerun independently of the full script!*
+
 ## Installation
 Install [streamlit-islands](https://pypi.org/project/streamlit-islands/) with pip:
 ```bash
@@ -42,7 +45,7 @@ The `function_name` should be the name of the function you define in your Stream
 This special format is specifically designed to be ignored by markdown parsers so that the markdown file can still be rendered as expected. 
 
 >[!NOTE]
->The `args` inside the parentheses can span multiple lines.
+>*The `args` inside the parentheses can span multiple lines.*
 
 There is one additional requirement for the placeholders. There must be an empty line ***before AND after*** the placeholder. Anything that comes directly after (not separated by an empty line) will be removed before the markdown is added to the Streamlit app. This is to allow you to add backup content, comments, or other content to the markdown file that you don't want to be rendered in the app but you ***DO*** want to be rendered by markdown parsers.
 
@@ -69,7 +72,7 @@ content = sti.load_content(file_path)
 The dynamic/interactive sections of the app are added by the functions you define in your Streamlit script. The functions that you want to be seen by `load_content` must be placed above where `load_content` is called. The function names must also match the names in the placeholders in the markdown file. The arguments passed to the functions should match the arguments in those placeholders as well. 
 
 >[!NOTE]
-> For organization purposes, you might want to have functions that are defined above `load_content` that you want to be ignored. You can do this using the `exclude` function from the `streamlit_islands` package.
+> *For organization purposes, you might want to have functions that are defined above `load_content` that you want to be ignored. You can do this using the `exclude` function from the `streamlit_islands` package.*
 
 ```python
 import streamlit as st
