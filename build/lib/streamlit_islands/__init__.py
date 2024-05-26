@@ -4,6 +4,11 @@ import inspect
 from ast import literal_eval
 # import os.path
 
+excluded_functions = []
+
+def exlude(function_name):
+    excluded_functions.append(function_name)
+
 def load_md(markdown_file_name):
     # # if file name starts with the result of os.path.join("..", ""), then the path is relative to the parent directory
     # parent_dir_prefix = os.path.join("..", "")
@@ -92,9 +97,9 @@ def load_content(markdown_file_name, use_write=False, **kwargs):
             caller_globals = dict(inspect.getmembers(inspect.stack()[1][0]))["f_locals"]
             function_name = dynamic_content[index][0]
             function_args = "[" + dynamic_content[index][1] + "]"
-            if function_name in caller_globals and callable(caller_globals[function_name]):
+            if function_name in caller_globals and callable(caller_globals[function_name]) and function_name not in excluded_functions:
                 call_local_function(function_name, function_args, caller_globals[function_name])
             else:
-                st.error('**ERROR!** `streamlit-islands` could not find a function called `<' + function_name + ">` in the streamlit script. Make sure the function is defined above the call to `load_content`.")
+                st.error('**ERROR!** `streamlit-islands` could not find a function called `<' + function_name + ">` in the streamlit script. Make sure the function is defined above the call to `load_content` and is not excluded.")
 
     return static_content, dynamic_content
