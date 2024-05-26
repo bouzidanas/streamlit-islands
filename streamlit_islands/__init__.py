@@ -94,7 +94,7 @@ def load_content(markdown_file_name, use_write=False, **kwargs):
         else:
             st.markdown(static_content[index], **kwargs)
         if len(dynamic_content) > index:
-            caller_globals = dict(inspect.getmembers(inspect.stack()[1][0]))["f_locals"]
+            caller_globals = dict(inspect.getmembers(inspect.stack()[1][0]))["f_locals"]  # This must be in a function called in the streamlit script to get the correct globals
             function_name = dynamic_content[index][0]
             function_args = "[" + dynamic_content[index][1] + "]"
             if function_name in caller_globals and callable(caller_globals[function_name]) and function_name not in excluded_functions:
