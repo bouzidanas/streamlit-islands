@@ -4,6 +4,12 @@ streamlit-islands  [![Version](https://img.shields.io/pypi/v/streamlit-islands)]
 
 Separate static content from dynamic content in Streamlit
 
+## Installation
+Install [streamlit-islands](https://pypi.org/project/streamlit-islands/) with pip:
+```bash
+pip install streamlit-islands
+```
+
 ## Overview
 For content heavy Streamlit applications, it can be useful to separate static content from dynamic/interactive content. This package provides a way to do that by allowing you to define static content in markdown files which then leaves you to focus on the logic heavy parts of your application in your Streamlit script. 
 
@@ -18,12 +24,6 @@ It might be useful to think of the dynamic parts of the app as 'islands' in a se
 
 >[!NOTE]
 >*You can achieve something closer to 'component islands' if you decorate the functions (that add dynamic parts of the script) with the `@st.experimental_fragment` decorator. This turns those dynamic parts of the script into fragments which can rerun independently of the full script!*
-
-## Installation
-Install [streamlit-islands](https://pypi.org/project/streamlit-islands/) with pip:
-```bash
-pip install streamlit-islands
-```
 
 ## Usage
 To use this package, you need to have a markdown file that contains the static content of your Streamlit app and a Streamlit script that contains the dynamic content.
