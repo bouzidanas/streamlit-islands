@@ -12,7 +12,7 @@ To use this package, you define your static content in markdown files and insert
 ### Why 'islands'?
 The general idea here can be achieved in other ways but this package is designed to make it easy and to encourage a separation of concerns. Inspiration for the name comes from [Astro Islands](https://docs.astro.build/en/concepts/islands/).
 
-While the concept of 'islands' architecture is not exactly the same as what this package does, the idea of separating static and dynamic regions of the app is similar.
+While the concept of 'islands' architecture is not the same as what this package does, the idea of separating static and dynamic regions of the app is similar.
 
 It might be useful to think of the dynamic parts of the app as 'islands' in a sea of static content. These islands are where the user interacts with the app and where the logic of the app is executed. Islands in the same app share the same global scope and thus can share data (variables, functions. etc) and state (`session_state`, etc).
 
