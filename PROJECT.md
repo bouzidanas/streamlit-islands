@@ -2,6 +2,8 @@ streamlit-islands  [![Version](https://img.shields.io/pypi/v/streamlit-islands)]
 [![PyPi - Downloads](https://img.shields.io/pypi/dm/streamlit-islands)](https://pypi.org/project/streamlit-islands/#files)[![Component Demo](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://islands-demo.streamlit.app/)
 ============
 
+Separate static content from dynamic content in Streamlit
+
 ## Installation
 Install [streamlit-islands](https://pypi.org/project/streamlit-islands/) with pip:
 ```bash
