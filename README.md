@@ -9,6 +9,13 @@ For content heavy Streamlit applications, it can be useful to separate static co
 
 To use this package, you define your static content in markdown files and insert special placeholders within the markdown in the locations where you want to insert dynamic content. The package then reads the markdown file and splits it at the placeholders. The static content is passed to `st.markdown` or `st.write` and the placeholders are replaced with calls to functions you define in your Streamlit script that contain the dynamic or interactive parts of the app.
 
+### Why 'islands'?
+The general idea here can be achieved in other ways but this package is designed to make it easy and to encourage a separation of concerns. Inspiration for the name comes from [Astro Islands](https://docs.astro.build/en/concepts/islands/).
+
+While the concept of 'islands' architecture is not exactly the same as what this package does, the idea of separating static and dynamic regions of the app is similar.
+
+It might be useful to think of the dynamic parts of the app as 'islands' in a sea of static content. These islands are where the user interacts with the app and where the logic of the app is executed. Islands in the same app share the same global scope and thus can share data (variables, functions. etc) and state (`session_state`, etc).
+
 ## Installation
 Install [streamlit-islands](https://pypi.org/project/streamlit-islands/) with pip:
 ```bash
