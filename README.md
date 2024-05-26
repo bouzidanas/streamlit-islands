@@ -82,7 +82,7 @@ def add(a, b):
     if st.button('Show the result'):
         st.toast("The result is: " + str(a + b)) 
 
-# Test the function
+# Load the content of the markdown file
 file_path = os.path.join(os.path.dirname(__file__), "my-markdown-file.md")
 content = sti.load_content(file_path)
 ```
@@ -107,7 +107,7 @@ def add(a, b):
 # Exclude the function from being used by load_content
 sti.exclude("say_hello")
 
-# Test the function
+# Load the content of the markdown file
 file_path = os.path.join(os.path.dirname(__file__), "my-markdown-file.md")
 content = sti.load_content(file_path)
 ```
