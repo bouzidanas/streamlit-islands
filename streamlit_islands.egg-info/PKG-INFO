@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: streamlit-islands
-Version: 0.0.1
+Version: 0.0.4
 Summary: Separate static content from dynamic content in Streamlit
 Home-page: https://github.com/bouzidanas/streamlit-islands
 Author: Anas Bouzid

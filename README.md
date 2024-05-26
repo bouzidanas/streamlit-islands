@@ -11,7 +11,4 @@ pip install streamlit-islands
 ## License
 This project is licensed under the [MIT License](LICENSE.txt)
 
-[hello]: # (arg 1, {
-    arg: "sell",
-    arg_alt: "buy"}, {arg 3}
-    )
+[say_hello]: # ("bob")

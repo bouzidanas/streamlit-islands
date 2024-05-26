@@ -9,3 +9,4 @@ streamlit_islands.egg-info/SOURCES.txt
 streamlit_islands.egg-info/dependency_links.txt
 streamlit_islands.egg-info/requires.txt
 streamlit_islands.egg-info/top_level.txt
+test/test.py
