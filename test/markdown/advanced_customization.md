@@ -1,6 +1,8 @@
 ## Advanced customization
 In the previous section, there is an issue with the appearance of the info and menu bar examples. The top two corners of the editor component are rounded which does not allow for a seemless connection of the left and right edges with the edges of the info/menu bar. On top of this, you might want the bars to appear on the bottom or even on the sides of the editor instead of on top. This is where `css` and `style` attributes really come in to play. 
+
 To get a better understanding of how to use these attributes, we need to go over the layout of the Code Editor component.
+
 ### Code Editor component layout
 
 [st_image]: # ("./test/resources/code_editor_layout.png")

@@ -4,9 +4,6 @@ from code_editor import code_editor
 from streamlit_islands import load_content
 import os
 
-# Opening JSON files
-# You can also just use a dictionary but with files (JSON or text for example),
-# its easier to transfer or use in multiple projects
 def load_resources():
     with open('./test/resources/example_custom_buttons_bar_adj.json') as json_button_file:
         custom_buttons_alt = json.load(json_button_file)
@@ -70,8 +67,7 @@ code_style = {"width": "100%"}
 
 # set style of info bar dict from previous example
 info_bar["style"] = {**info_bar["style"], "order": "1", "height": "2.0rem", "padding": "0rem 0.6rem", "padding-bottom": "0.2rem"}
-response_dict = code_editor(your_code_string, height=20, info=info_bar, props={"style": ace_style}, component_props={"style": code_style})
-"""
+response_dict = code_editor(your_code_string, height=20, info=info_bar, props={"style": ace_style}, component_props={"style": code_style})"""
     info_bar["style"] = {**info_bar["style"], "order": "1", "height": "2.0rem", "padding": "0rem 0.6rem", "padding-bottom": "0.2rem"}
     code_editor(code_setting_style, height=20, info=info_bar, props={"style": {"borderRadius": "0px 0px 8px 8px"}});
 
