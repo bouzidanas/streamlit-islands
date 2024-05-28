@@ -178,8 +178,7 @@ def st_status(status, type="info"):
 def st_image(image_path):
     st.image(image_path)
 
-
-# The app
+# The app ------------------------------------------------
 custom_buttons, custom_buttons_alt, info_bar, css_text = load_resources()
 col1, col2 = st.columns([6,2])
 add_style()
