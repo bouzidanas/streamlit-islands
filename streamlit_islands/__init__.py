@@ -53,10 +53,16 @@ def process_md(md):
                 in_dynamic_content = True
 
             if len(static_content) > 0:
+                inside_exception = False
                 for index in range(len(temp_content)):
-                    if temp_content[index].strip() == "":
+                    if temp_content[index].strip() == "" and not inside_exception:
                         static_content.append("\n".join(temp_content[index:]))
                         break
+                    elif inside_exception:
+                        if temp_content[index].strip().endswith("```"):
+                            inside_exception = False
+                    elif temp_content[index].strip().startswith("```"):
+                        inside_exception = True
             else:
                 static_content.append("\n".join(temp_content))
             temp_content = []
@@ -71,10 +77,16 @@ def process_md(md):
 
     # Make sure to add the last bit of static content        
     if len(temp_content) > 0:
+        inside_exception = False
         for index in range(len(temp_content)):
-            if temp_content[index].strip() == "":
+            if temp_content[index].strip() == "" and not inside_exception:
                 static_content.append("\n".join(temp_content[index:]))
                 break
+            elif inside_exception:
+                if temp_content[index].strip().endswith("```"):
+                    inside_exception = False
+            elif temp_content[index].strip().startswith("```"):
+                inside_exception = True
 
     return static_content, dynamic_content
 

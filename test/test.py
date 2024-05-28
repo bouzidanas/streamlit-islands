@@ -5,9 +5,10 @@ import os.path
 def say_hello(name):
     st.write(name*10)
 
-def add(a, b):
-    if st.button('Show the result'):
-        st.toast("The result is: " + str(a + b)) 
+@st.experimental_fragment
+def add(a, b, id=None):
+    if st.button('Show the result', key=id):
+        st.toast("The result is: " + str(a + b))
 
 # Test the function
 files = ["../streamlit_islands/test.md", "../README.md"]
